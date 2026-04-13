@@ -4,14 +4,6 @@ A full-stack web application that allows users to register, login, view doctors,
 
 ---
 
-## Live Deployed Link
-
-```text
-https://appointment-booking-system-production-ed4c.up.railway.app
-```
-
----
-
 ## 📷 Preview
 
 User Dashboard
@@ -110,21 +102,6 @@ CREATE DATABASE appointment_db;
 ```text
 http://localhost:8080/AppointmentBookingSystem/
 ```
-
----
-
-## 🌐 Deployment
-
-The project is deployed using **Railway**.
-
-Steps:
-
-1. Push code to GitHub
-2. Connect GitHub repo to Railway
-3. Add MySQL service
-4. Set environment variables
-5. Deploy project
-6. Generate public domain
 
 ---
 
