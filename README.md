@@ -1,6 +1,11 @@
 # 🏥 Appointment Booking System
 
-A full-stack web application that allows users to register, login, view doctors, and book appointments. Built using **Java (JSP/Servlets)**, **MySQL**, and deployed on **Railway**.
+A full-stack web application that allows users to register, login, view doctors, and book appointments. Built using **Java (JSP/Servlets)**, **MySQL**.
+
+---
+
+## Youtube Demo Video:  
+https://youtu.be/Q-iE_L3CNxE?si=vtHcTmJtBJDzmM0K
 
 ---
 
@@ -21,7 +26,6 @@ Admin Panel
 * 📅 Book Appointments
 * 📋 View Appointment Details
 * 🔐 Secure Database with Foreign Key Relationships
-* 🌐 Deployed Online using Railway
 
 ---
 
@@ -31,7 +35,6 @@ Admin Panel
 * **Backend:** Java Servlets
 * **Database:** MySQL
 * **Server:** Apache Tomcat
-* **Deployment:** Railway
 
 ---
 
@@ -67,13 +70,21 @@ Admin Panel
 
 ## ⚙️ Environment Variables
 
-The application uses environment variables for database connection:
+The application uses environment variables for database connection. For local development, use a local MySQL database:
 
 ```env
-DB_URL=jdbc:mysql://<host>:<port>/railway?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+DB_URL=jdbc:mysql://localhost:3306/appointment_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
 DB_USER=root
 DB_PASS=<your_password>
 ```
+
+> If you use Windows PowerShell for a session:
+>
+> ```powershell
+> $env:DB_URL = 'jdbc:mysql://localhost:3306/appointment_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC'
+> $env:DB_USER = 'root'
+> $env:DB_PASS = 'your_password'
+> ```
 
 ---
 
@@ -85,7 +96,7 @@ DB_PASS=<your_password>
 git clone https://github.com/your-username/appointment-booking-system.git
 ```
 
-2. Import into IDE (Eclipse/IntelliJ)
+2. Import into IDE (Eclipse/IntelliJ) or run from the terminal
 
 3. Configure MySQL:
 
@@ -93,14 +104,24 @@ git clone https://github.com/your-username/appointment-booking-system.git
 CREATE DATABASE appointment_db;
 ```
 
-4. Run SQL schema (tables + inserts)
+4. Create the tables and seed any initial data using your SQL script or schema
 
-5. Deploy on Apache Tomcat
+5. Copy `.env.example` to `.env` and update the values:
 
-6. Access:
+```powershell
+copy .env.example .env
+```
+
+6. Run the application from the project root:
+
+```bash
+mvn tomcat7:run
+```
+
+7. Access the web app in your browser:
 
 ```text
-http://localhost:8080/AppointmentBookingSystem/
+http://localhost:8080/appointment
 ```
 
 ---
