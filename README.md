@@ -4,8 +4,17 @@ A full-stack web application that allows users to register, login, view doctors,
 
 ---
 
-## Youtube Demo Video:  
+## Links
+
+1. Youtube Demo Video:
+```text
 https://youtu.be/Q-iE_L3CNxE?si=vtHcTmJtBJDzmM0K
+```
+
+2. API Documentation (Postman):
+```text
+https://documenter.getpostman.com/view/39216679/2sBXwtoor5
+```
 
 ---
 
